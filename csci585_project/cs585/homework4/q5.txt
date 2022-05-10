@@ -1,0 +1,1 @@
+{geometry: {$geoWithin: {$geometry: {type : "Polygon" ,coordinates: [ [ [ -111.9,34.8 ], [ -109.6,38.7 ], [ -105.8,35.5 ], [ -111.9,34.8 ] ] ]}}}}

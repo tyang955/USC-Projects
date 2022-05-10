@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>home</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.29103686501324,34.06143549041695</coordinates></Point>
+</Placemark>
+<Placemark><name>doheny Library</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28384330363707,34.02009619979822</coordinates></Point>
+</Placemark>
+<Placemark><name>cinematic arts</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28655874462612,34.02350105321015</coordinates></Point>
+</Placemark>
+<Placemark><name>usc pharmacy</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28892224259157,34.02495122100054</coordinates></Point>
+</Placemark>
+<Placemark><name>dedeaux field</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2899038937467,34.02379689348719</coordinates></Point>
+</Placemark>
+<Placemark><name>john mckay</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28767765396064,34.0231329976804</coordinates></Point>
+</Placemark>
+<Placemark><name>little galen</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28708025978308,34.02290325831203</coordinates></Point>
+</Placemark>
+<Placemark><name>bing theatre</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28607663762608,34.02239228402551</coordinates></Point>
+</Placemark>
+<Placemark><name>physical education</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2866044691909,34.02123893882575</coordinates></Point>
+</Placemark>
+<Placemark><name>viterbi</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28960099833539,34.02067645981281</coordinates></Point>
+</Placemark>
+<Placemark><name>architecture</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2880299876945,34.01918190941739</coordinates></Point>
+</Placemark>
+<Placemark><name>admission center</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28623668013563,34.01997970010885</coordinates></Point>
+</Placemark>
+<Placemark><name>marshall</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28586576536743,34.018840583598056</coordinates></Point>
+</Placemark>
+</Document></kml>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="main.css" type="text/css" rel="stylesheet"/>
+
+    <meta charset="UTF-8">
+    <title>Homework2</title>
+</head>
+<body>
+
+<h3>Blood Pressure Predictor</h3>
+<h5>Fill out the form to get your Blood Pressure estimate</h5>
+
+<form id="blood_pressure" class="blood_pressure" method="post" action="blood_pressure">
+    <fieldset>
+        <div><label style="display: inline" for="age">Age: </label><p id = star>*</p>
+            <input style="display: inline" type="number" id="age" name="age" min="0" placeholder="Enter age in years" required></div>
+
+        <div><label style="display: inline" for="weight">Weight: </label><p id = star>*</p>
+            <input style="display: inline"  type="number" id="weight" name="weight" min="0" placeholder="Enter weight in kg" required></div>
+    </fieldset>
+</form>
+<p><button type="submit" form="blood_pressure" value="Submit">Calculate</button></p>
+
+<p>{{ shortcode }}</p>
+
+</body>
+</html>

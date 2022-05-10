@@ -1,0 +1,55 @@
+
+<!-- saved from url=(0012)about:srcdoc -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS API for JavaScript Tutorials: Display a Web Map</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css">
+  <script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/WebMap.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/views/MapView.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/widgets/ScaleBar.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/widgets/Legend.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/widgets/ScaleBar/ScaleBarViewModel.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/geometry/support/geodesicUtils.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/views/2d/webglDeps.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/views/2d/mapViewDeps.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/layers/TileLayer.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/layers/VectorTileLayer.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/views/2d/layers/FeatureLayerView2D.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/views/2d/layers/TileLayerView2D.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/views/2d/layers/VectorTileLayerView2D.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/chunks/libtess.js"></script><script type="text/javascript" charset="utf-8" src="https://js.arcgis.com/4.23/esri/views/2d/layers/features/tileRenderers/SymbolTileRenderer.js"></script><script src="https://js.arcgis.com/4.23/"></script>
+
+  <script>
+    require([
+      "esri/config",
+      "esri/WebMap",
+      "esri/views/MapView",
+      "esri/widgets/ScaleBar",
+      "esri/widgets/Legend"
+    ], function(esriConfig, WebMap, MapView, ScaleBar, Legend) {
+
+    esriConfig.apiKey = "AAPK28fa12c4d586490d9699a23c5e5ba8aeJL7KEF5kliI21zt6rLbMhDBSFpuub2qbRFqN3wpNjoKTLLysCfz29x3_slJOKDDv";
+
+      const webmap = new WebMap({ 
+        portalItem: {
+          id: "e8f3b5b3a77247aba9b08691053f0601"
+        }
+    });
+      
+      
+      const view = new MapView({
+        container: "viewDiv",
+        center: [-118.28538,34.0205],
+        zoom: 15, 
+        map: webmap
+      });
+	  
+	  const scalebar = new ScaleBar({
+        view: view
+      });
+
+      view.ui.add(scalebar, "bottom-left");
+
+  });
+  </script>
+</head>
+<body>
+  <div id="viewDiv" class="esri-view esri-view-width-medium esri-view-width-greater-than-xsmall esri-view-width-greater-than-small esri-view-width-less-than-large esri-view-width-less-than-xlarge esri-view-height-xsmall esri-view-height-less-than-small esri-view-height-less-than-medium esri-view-height-less-than-large esri-view-height-less-than-xlarge esri-view-orientation-landscape"><div class="esri-view-root"><div class="esri-view-surface esri-view-surface--inset-outline esri-view-surface--touch-none" role="application" tabindex="0"><canvas style="width: 803px; height: 450px; display: block;" width="1265" height="709"></canvas></div><div class="esri-overlay-surface"><div style="visibility: hidden;"></div></div><div class="esri-ui calcite-theme-light" style="inset: 0px;"><div class="esri-ui-inner-container esri-ui-corner-container" style="inset: 15px 15px 30px;"><div class="esri-ui-top-left esri-ui-corner"><div class="esri-component esri-zoom esri-widget"><div class="esri-widget--button esri-widget esri-interactive" role="button" tabindex="0" title="Zoom in"><span aria-hidden="true" role="presentation" class="esri-icon esri-icon-plus"></span><span class="esri-icon-font-fallback-text">Zoom in</span></div><div class="esri-widget--button esri-widget esri-interactive" role="button" tabindex="0" title="Zoom out"><span aria-hidden="true" role="presentation" class="esri-icon esri-icon-minus"></span><span class="esri-icon-font-fallback-text">Zoom out</span></div></div></div><div class="esri-ui-top-right esri-ui-corner"></div><div class="esri-ui-bottom-left esri-ui-corner"><div class="esri-component esri-scale-bar esri-widget"><div class="esri-scale-bar__bar-container esri-scale-bar__bar-container--line"><div class="esri-scale-bar__line esri-scale-bar__line--bottom" style="width: 82px;"></div><div class="esri-scale-bar__label-container esri-scale-bar__label-container--line esri-scale-bar__label-container--bottom"><div class="esri-scale-bar__label">0.2 mi</div></div></div></div></div><div class="esri-ui-bottom-right esri-ui-corner"></div></div><div class="esri-ui-inner-container esri-ui-manual-container"><div class="esri-component esri-attribution esri-widget"><div class="esri-attribution__sources esri-interactive" tabindex="0" role="button">Esri, NASA, NGA, USGS, FEMA | Esri Community Maps Contributors, County of Los Angeles, California State Parks, Esri, HERE, Garmin, SafeGraph, GeoTechnologies, Inc, METI/NASA, USGS, Bureau of Land Management, EPA, NPS, US Census Bureau, USDA</div><div class="esri-attribution__powered-by">Powered by <a class="esri-attribution__link" href="http://www.esri.com/" target="_blank" rel="noreferrer">Esri</a></div></div><div class="esri-component" style="display: none;"></div><div class="esri-component" style="display: none;"></div></div></div></div><div class="esri-view-user-storage"></div></div>
+
+</body></html>

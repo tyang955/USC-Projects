@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="homework1_resources/main.css" type="text/css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <title>Homework1</title>
+
+    <script>
+        // fetch() is an alternate/better/newer way to fetch data,
+        // compared to XHR. Below, uncomment/comment either 'DATA'
+        // line...
+        let DATA = 'homework1_resources/data.json';
+        //let DATA='https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
+
+        fetch(DATA)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+
+        function appendData(data) {
+            var mainContainer2 = document.getElementById("section2");
+            var together = document.createElement("div");
+
+            for (var i = 0; i < data["section2"].length; i++) {
+                var div = document.createElement("div");
+                var img = document.createElement('img');
+                var divw = document.createElement("div");
+                img.src = "homework1_resources/"+data["section2"][i].image;
+                img.width = "160";
+                img.height = "80";
+
+                div.appendChild(img)
+                divw.innerHTML +="<h4>"+data["section2"][i].heading+"</h4>";
+                divw.innerHTML +="<br>";
+                divw.innerHTML +="<p>"+data["section2"][i].text+"</p>";
+                div.appendChild(divw)
+                together.appendChild(div);
+            }
+            mainContainer2.appendChild(together);
+
+
+            var mainContainer3 = document.getElementById("section3");
+            var together = document.createElement("div");
+
+            for (var i = 0; i < 1; i++) {
+                var div = document.createElement("div");
+                var img = document.createElement('img');
+
+                div.innerHTML +="<p>"+data["section3"].text[0]+"</p>";
+                div.innerHTML +="<br>";
+                div.innerHTML +="<p>"+data["section3"].text[1]+"</p>";
+
+                var divi = document.createElement("div");
+
+                img.src = "homework1_resources/lasky.png";
+                img.width = "180";
+                img.height = "130";
+                divi.appendChild(img)
+                together.appendChild(div)
+                together.appendChild(divi)
+
+
+                mainContainer3.appendChild(together);
+            }
+
+            var mainContainer4 = document.getElementById("section4");
+            var together = document.createElement("div");
+
+            for (var i = 0; i < data["section4"].length; i++) {
+
+                if (i % 2 == 0){
+                    var div = document.createElement("div");
+
+                    var div1 = document.createElement("div");
+                    var img1 = document.createElement('img');
+
+                    img1.src = "homework1_resources/"+data["section4"][i].image;
+                    img1.width = "200";
+                    img1.height = "130";
+
+                    div1.innerHTML +="<h2>"+data["section4"][i].heading+"</h2>";
+                    div1.innerHTML +="<p>"+data["section4"][i].text+"</p>";
+
+                    div.appendChild(img1);
+                    div.appendChild(div1);
+                    together.appendChild(div);
+                }
+                else{
+                    var div = document.createElement("div");
+                    div.className = "right";
+                    var div1 = document.createElement("div");
+                    var img1 = document.createElement('img');
+
+                    img1.src = "homework1_resources/"+data["section4"][i].image;
+                    img1.width = "200";
+                    img1.height = "130";
+
+                    div1.innerHTML +="<h2>"+data["section4"][i].heading+"</h2>";
+                    div1.innerHTML +="<p>"+data["section4"][i].text+"</p>";
+
+                    div.appendChild(div1);
+                    div.appendChild(img1);
+                    together.appendChild(div);
+                }
+
+                mainContainer4.appendChild(together);
+            }
+        }
+        // exercise: make the .then() part of immediately
+        // executed fetchData() :) [in other words, avoid
+        // doing fetchData() above, and 'migrate' the .then() part]
+        // hint: }().then(
+    </script>
+</head>
+<header>
+    <nav><p><a href="homework1.html">Home</a></p>
+        <p><a href="404.html">Explore</a></p>
+        <p><a href=404.html>Contact</a></p></nav>
+</header>
+<body>
+<section id = banner>
+    <span>LA - The City of Angels</span>
+</section>
+<section id =section2>
+</section>
+<section id =section3>
+</section>
+<section id =section4>
+</section>
+<footer>
+    <div class = "tip">
+        <p>Tip the world over on its side and everything loose will land in Los Angeles</p>
+        <br>
+        <p>-Frank Lioyd Wright</p>
+    </div>
+    <div class = "name">
+        <h2>Designed By</h2>
+        <br>
+        <p>Tianhao Yang</p>
+        <br>
+        <p><a href = "mailto:tyang955@usc.edu">tyang955@usc.edu</a></p>
+        <p><a href="tel:5173030394">(+1)517 303 0394</a></p>
+    </div>
+</footer>
+
+
+</body>
+</html>

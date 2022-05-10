@@ -1,0 +1,56 @@
+html, body, header, footer, hgroup, nav, article, section, figure,span,
+figcaption, h1, h2, h3, h4,h5, ul, li, body, div, p, img {
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 40;
+
+}
+
+h1, h2, h3, h4,h5{
+    font-weight: bolder;
+    color: darkred;
+}
+
+h3{
+    margin-top: 50px;
+    font-weight: bold;
+}
+fieldset{
+    height: 170px;
+}
+body{
+    margin-left: 100px;
+    width :600px;
+    text-align: center;
+}
+body .blood_pressure {
+    text-align: right;
+}
+
+body .blood_pressure p{
+    margin-right: 150px;
+}
+
+
+button {
+    background: #0066A2;
+    color: white;
+    border-style: outset;
+    border-color: #0066A2;
+    height: 30px;
+    width: 80px;
+    text-shadow: none;
+}
+div {
+    text-align: right;
+    width: 400px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+#star{
+    display: inline;
+    margin: 0;
+    color:darkred;
+    font-weight: bold;
+}

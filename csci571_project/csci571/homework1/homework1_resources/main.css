@@ -1,0 +1,266 @@
+html, body, header, footer, hgroup, nav, article, section, figure,span,
+figcaption, h1, h2, h3, h4, ul, li, body, div, p, img {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 40;
+}
+
+h2{
+    margin-bottom: 13px;
+}
+body{
+    background-color: black;
+}
+
+#banner {
+    background-image: url("rodeo-drive.jpg");
+    width: 800px;
+    text-align: center;
+
+    background-position: top 1292px left 0px;
+    background-size: cover;
+    height: 200px;
+    line-height: 200px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #f47920;
+    text-shadow: 1px 1px #FFFFFF;
+}
+
+
+#section2 {
+    background-color: rgb(35,35,38);
+    width: 800px;
+    height: 400px;
+    font-size: 10px;
+    color: white;
+    padding-top: 50px;
+}
+
+#section2 div{
+    width: 80%;
+    margin: 40px auto auto;
+}
+
+#section2 div div{
+    display: inline-block;
+    width: 170px;
+    background-color: rgb(18, 18, 26);
+    margin: 10px;
+    height: 250px;
+    vertical-align:top;
+    padding: 10px;
+
+}
+
+#section2 div div div{
+    margin: 0px;
+    padding: 0px;
+    height: 100px;
+
+}
+
+#section2 div div img{
+    width: 170px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+}
+
+
+
+#section3 {
+    background-color: rgb(18, 18, 26);
+    width: 800px;
+    padding-top: 80px;
+    height: 300px;
+    font-size: 10px;
+    color: white;
+}
+
+#section3 div{
+    width: 80%;
+    margin: auto;
+}
+
+#section3 div div{
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+    height: 160px;
+    vertical-align:top;
+    text-align: justify;
+
+}
+
+#section3 div div img{
+    width: 300px;
+    height: 160px;
+
+}
+
+#section4 {
+    background-color: rgb(35,35,38);
+    width: 800px;
+    padding-top: 80px;
+    height: 400px;
+    font-size: 10px;
+    color: white;
+}
+
+
+
+#section4 div{
+    width: 80%;
+    margin: auto;
+}
+
+#section4 div div{
+    width: 700px;
+    margin: 10px;
+    height: 160px;
+    text-align: justify;
+
+}
+#section4 div div div{
+    display: inline-block;
+    vertical-align:top;
+    width: 350px;
+    height: 160px;
+    margin: 0px 10px;
+    padding-top: 3px;
+
+}
+
+#section4 div div.right div h2{
+    text-align: right;
+}
+
+
+#section4 div div image{
+    display: inline-block;
+    width: 250px;
+    height: 160px;
+    vertical-align:top;
+
+}
+
+
+#section404pic{
+
+    background-image:
+            linear-gradient(to bottom, rgba(244, 121, 32, 0.52), rgba(244, 121, 32, 0.52)),
+            url('404-featured.jpg');
+
+    background-size: cover;
+
+    width: 800px;
+    text-align: center;
+    background-position: top 1250px left 0px;
+    height: 230px;
+    line-height: 230px;
+    font-size: 21px;
+    font-weight: 600;
+    color: black;
+}
+
+#section404{
+    background-color: rgb(35,35,38);
+    width: 800px;
+    padding-top: 100px;
+    height: 200px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: rgb(18, 18, 26);
+    width: 800px;
+    height: 50px;
+}
+
+footer {
+    background-color: rgb(18, 18, 26);
+    width: 800px;
+    color: white;
+    font-size: 10px;
+}
+footer div{
+    display: inline-block;
+    width: 40%;
+    height: 100px;
+    vertical-align:top;
+    text-align: center;
+}
+
+footer div.tip{
+    padding-top: 70px;
+    padding-left: 50px;
+
+}
+
+footer div.name{
+    padding-top: 40px;
+}
+nav {
+    padding-left: 200px;
+
+}
+
+nav p {
+    width: 70px;
+    display: inline-block;
+    padding-bottom: 1em;
+    padding-left: 50px;
+    padding-top: 1em;
+
+    font-size: 14px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px #f47920;
+
+}
+
+a { text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 40;
+}
+
+header a:hover {
+    color: #f47920;
+    text-shadow: 1px 1px white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#header404 a {
+    color: #f47920;
+    text-shadow: 1px 1px white;
+
+}
+
+#header404 a:hover {
+    color: white;
+    text-shadow: 1px 1px #f47920;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+h2{
+    font-size: 15px;
+    font-weight: 70;
+}
+h4{
+    font-size: 12px;
+    font-weight: 70;
+}

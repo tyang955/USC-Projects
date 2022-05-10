@@ -1,0 +1,54 @@
+SELECT ST_AsText(ST_ConvexHull(
+	ST_Collect(ST_GeomFromText('MULTIPOINT(-118.2995532819519 34.02302374149809, -118.28384330363707 34.02009619979822, -118.28655874462612 34.02350105321015, -118.28892224259157 34.02495122100054,-118.2899038937467 34.02379689348719, -118.28767765396064 34.0231329976804, -118.28708025978308 34.02290325831203, -118.28607663762608 34.02239228402551,-118.2866044691909 34.02123893882575,-118.28960099833539 34.02067645981281,-118.2880299876945 34.01918190941739,-118.28623668013563 34.01997970010885,-118.28586576536743 34.018840583598056)')
+			)) );
+
+
+
+
+
+create table locations(
+name varchar(30)
+);
+
+select AddGeometryColumn('locations','points_geom',4326, 'POINT', 2); 
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('marshall',ST_GeomFromText('Point(-118.28586576536743 34.018840583598056)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('doheny Library',ST_GeomFromText('Point(-118.28384330363707 34.02009619979822)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('cinematic arts',ST_GeomFromText('Point(-118.28655874462612 34.02350105321015)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('usc pharmacy',ST_GeomFromText('Point(-118.28892224259157 34.02495122100054)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('dedeaux field',ST_GeomFromText('Point(-118.2899038937467 34.02379689348719)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('john mckay',ST_GeomFromText('Point(-118.28767765396064 34.0231329976804)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('little galen',ST_GeomFromText('Point(-118.28708025978308 34.02290325831203)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('bing theatre',ST_GeomFromText('Point(-118.28607663762608 34.02239228402551)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('physical education',ST_GeomFromText('Point(-118.2866044691909 34.02123893882575)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('viterbi',ST_GeomFromText('Point(-118.28960099833539 34.02067645981281)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('architecture',ST_GeomFromText('Point(-118.2880299876945 34.01918190941739)',4326));
+
+INSERT INTO locations (name, points_geom) 
+VALUES ('admission center',ST_GeomFromText('Point(-118.28623668013563 34.01997970010885)',4326));
+
+SELECT *
+FROM locations
+ORDER BY locations.points_geom <->  ST_GeomFromText('Point(-118.2995532819519 34.02302374149809)',4326)
+LIMIT 4;

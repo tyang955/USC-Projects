@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>OL</title>
+    <script src="https://openlayers.org/api/OpenLayers.js">
+    </script>
+    <style>
+        #map {
+            width:400px;
+            height:400px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<script>
+
+    var d = {"home":[{"a":-118.2995532819519, "b":34.02302374149809}],
+        "doheny_Library":[{"a":-118.28384330363707, "b":34.02009619979822}],
+        "cinematic_arts":[{"a":-118.28655874462612, "b":34.02350105321015}],
+        "usc_pharmacy":[{"a":-118.28892224259157, "b":34.02495122100054}],
+        "dedeaux_field":[{"a":-118.2899038937467, "b":34.02379689348719}],
+        "john_mckay":[{"a":-118.28767765396064, "b":34.0231329976804}],
+        "little_galen":[{"a":-118.28708025978308, "b":34.02290325831203}],
+        "bing_theatre":[{"a":-118.28607663762608, "b":34.02239228402551}],
+        "physical_education":[{"a":-118.2866044691909, "b":34.02123893882575}],
+        "viterbi":[{"a":-118.28960099833539, "b":34.02067645981281}],
+        "architecture":[{"a":-118.2880299876945, "b":34.01918190941739}],
+        "admission_center":[{"a":-118.28623668013563, "b":34.01997970010885}],
+        "marshall":[{"a":-118.28586576536743, "b":34.018840583598056}]};
+    localStorage.setItem("myData",JSON.stringify(d));
+
+    var dataStored = JSON.parse(localStorage.getItem("myData"));
+    // verify that we fetched our data correctly
+    console.log(dataStored);
+
+    var a1 = dataStored.home; // a will contain our array
+    for(var indx1 in a1) { // indx is 0,1,2...
+        console.log(a1[indx1]); // this could be a single point
+    }
+
+    var a2 = dataStored.doheny_Library; // a will contain our array
+    for(var indx2 in a2) { // indx is 0,1,2...
+        console.log(a2[indx2]); // this could be a single point
+    }
+
+    var a3 = dataStored.cinematic_arts; // a will contain our array
+    for(var indx3 in a3) { // indx is 0,1,2...
+        console.log(a3[indx3]); // this could be a single point
+    }
+
+
+    var a4 = dataStored.usc_pharmacy; // a will contain our array
+    for(var indx4 in a4) { // indx is 0,1,2...
+        console.log(a4[indx4]); // this could be a single point
+    }
+
+    var a5 = dataStored.dedeaux_field; // a will contain our array
+    for(var indx5 in a5) { // indx is 0,1,2...
+        console.log(a5[indx5]); // this could be a single point
+    }
+
+
+    var a6 = dataStored.john_mckay; // a will contain our array
+    for(var indx6 in a6) { // indx is 0,1,2...
+        console.log(a6[indx6]); // this could be a single point
+    }
+
+    var a7 = dataStored.little_galen; // a will contain our array
+    for(var indx7 in a7) { // indx is 0,1,2...
+        console.log(a7[indx7]); // this could be a single point
+    }
+
+    var a8 = dataStored.bing_theatre; // a will contain our array
+    for(var indx8 in a8) { // indx is 0,1,2...
+        console.log(a8[indx8]); // this could be a single point
+    }
+
+    var a9 = dataStored.physical_education; // a will contain our array
+    for(var indx9 in a9) { // indx is 0,1,2...
+        console.log(a9[indx9]); // this could be a single point
+    }
+
+
+    var a10 = dataStored.viterbi; // a will contain our array
+    for(var indx10 in a10) { // indx is 0,1,2...
+        console.log(a10[indx10]); // this could be a single point
+    }
+
+
+    var a11 = dataStored.architecture; // a will contain our array
+    for(var indx11 in a11) { // indx is 0,1,2...
+        console.log(a11[indx11]); // this could be a single point
+    }
+
+
+    var a12 = dataStored.admission_center; // a will contain our array
+    for(var indx12 in a12) { // indx is 0,1,2...
+        console.log(a12[indx12]); // this could be a single point
+    }
+
+    var a13 = dataStored.marshall; // a will contain our array
+    for(var indx13 in a13) { // indx is 0,1,2...
+        console.log(a13[indx13]); // this could be a single point
+    }
+
+    function initMap() {
+        map = new OpenLayers.Map('map');
+        basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+        map.addLayer(basemap);
+        markers = new OpenLayers.Layer.Markers("Markers");
+        map.addLayer(markers);
+    }// initMap()
+
+
+    function addMarker(latitude, longitude) {
+        var lonLat = new OpenLayers.LonLat(longitude, latitude)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                map.getProjectionObject() // to Spherical Mercator Projection
+            );
+        var point = new OpenLayers.Marker(lonLat);
+        markers.addMarker(point);
+        map.setCenter(lonLat, 14); // second arg is zoom level
+        //console.log(latitude + ", " + longitude);
+    }// addMarker()
+
+    initMap();
+
+    // here's how to plot just ONE [lat,long] on the map!
+    addMarker(a1[0].b,a1[0].a); // somewhere in SoCal...
+    addMarker(a2[0].b,a2[0].a); // somewhere in SoCal...
+    addMarker(a3[0].b,a3[0].a); // somewhere in SoCal...
+    addMarker(a4[0].b,a4[0].a); // somewhere in SoCal...
+    addMarker(a5[0].b,a5[0].a); // somewhere in SoCal...
+    addMarker(a6[0].b,a6[0].a); // somewhere in SoCal...
+    addMarker(a7[0].b,a7[0].a); // somewhere in SoCal...
+    addMarker(a8[0].b,a8[0].a); // somewhere in SoCal...
+    addMarker(a9[0].b,a9[0].a); // somewhere in SoCal...
+    addMarker(a10[0].b,a10[0].a); // somewhere in SoCal...
+    addMarker(a11[0].b,a11[0].a); // somewhere in SoCal...
+    addMarker(a12[0].b,a12[0].a); // somewhere in SoCal...
+    addMarker(a13[0].b,a13[0].a); // somewhere in SoCal...
+
+</script>
+</body>
+
+</html>
